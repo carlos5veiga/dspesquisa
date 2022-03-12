@@ -3,7 +3,6 @@ package com.sds1.dto;
 import java.io.Serializable;
 
 import com.sds1.entities.Game;
-import com.sds1.entities.Genre;
 import com.sds1.entities.enums.Platform;
 
 public class GameDTO implements Serializable {

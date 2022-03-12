@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.Instant;
 
 import com.sds1.entities.Record;
+import com.sds1.entities.enums.Platform;
 
 public class RecordDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -12,25 +13,21 @@ public class RecordDTO implements Serializable {
 	private String name;
 	private Integer age;
 	private Instant moment;
-	private GameDTO game;
+	private String gameTitle;
+	private Platform gamePlatform;
+	private String genreName;
 	
 	public RecordDTO() {
 	}
 
-	public RecordDTO(Long id, String name, Integer age, Instant moment, GameDTO game) {
-		this.id = id;
-		this.name = name;
-		this.age = age;
-		this.moment = moment;
-		this.game = game;
-	}
-	
 	public RecordDTO(Record entity) {
 		id = entity.getId();
 		name = entity.getName();
 		age = entity.getAge();
 		moment = entity.getMoment();
-		game = new GameDTO(entity.getGame());
+		gameTitle = entity.getGame().getTitle();
+		gamePlatform = entity.getGame().getPlatform();
+		genreName = entity.getGame().getGenre().getName();
 	}
 
 	public Long getId() {
@@ -65,11 +62,27 @@ public class RecordDTO implements Serializable {
 		this.moment = moment;
 	}
 
-	public GameDTO getGame() {
-		return game;
+	public String getGameTitle() {
+		return gameTitle;
 	}
 
-	public void setGame(GameDTO game) {
-		this.game = game;
+	public void setGameTitle(String gameTitle) {
+		this.gameTitle = gameTitle;
+	}
+
+	public Platform getGamePlatform() {
+		return gamePlatform;
+	}
+
+	public void setGamePlatform(Platform gamePlatform) {
+		this.gamePlatform = gamePlatform;
+	}
+
+	public String getGenreName() {
+		return genreName;
+	}
+
+	public void setGenreName(String genreName) {
+		this.genreName = genreName;
 	}
 }
