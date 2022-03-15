@@ -1,9 +1,15 @@
 import React from 'react';
 import './App.css';
+import Hello from './Hello';
 
 function App() {
   return (
-    <h1>Hello React!!</h1>
+    <div>
+      <Hello message='Carlos'/>
+      <Hello message='Washington'/>
+      <Hello message='Nelio'/>
+      <Hello message='World'/>
+    </div>
   );
 }
 
