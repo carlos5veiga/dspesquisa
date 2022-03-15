@@ -1,14 +1,11 @@
 import React from 'react';
 import './App.css';
-import Hello from './Hello';
+import Header from './components/Header';
 
 function App() {
   return (
     <div>
-      <Hello message='Carlos'/>
-      <Hello message='Washington'/>
-      <Hello message='Nelio'/>
-      <Hello message='World'/>
+      <Header />
     </div>
   );
 }
