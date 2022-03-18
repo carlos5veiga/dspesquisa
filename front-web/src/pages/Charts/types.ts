@@ -6,7 +6,3 @@ export type Game = {
     platform: Platform;
 }
 
-export type CharItem = {
-    x: string;
-    y: number;
-}

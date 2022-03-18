@@ -45,8 +45,9 @@ export const barOptions = {
     plotOptions: {
         bar: {
             horizontal: true,
-            borderRadius: 20,
-            barHeight: "60px",
+            borderRadius: 10,
+            barHeight: "70%",
+            distributed: false,
         },
     },
     dataLabels: {
