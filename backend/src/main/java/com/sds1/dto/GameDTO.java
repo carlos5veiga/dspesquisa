@@ -11,23 +11,20 @@ public class GameDTO implements Serializable {
 	private Long id;
 	private String title;
 	private Platform platform;
-	private GenreDTO genre;
 
 	public GameDTO() {
 	}
 
-	public GameDTO(Long id, String title, Platform platform, GenreDTO genre) {
+	public GameDTO(Long id, String title, Platform platform) {
 		this.id = id;
 		this.title = title;
 		this.platform = platform;
-		this.genre = genre;
 	}
 	
 	public GameDTO(Game entity) {
 		id = entity.getId();
 		title = entity.getTitle();
 		platform = entity.getPlatform();
-		genre = new GenreDTO(entity.getGenre());
 	}
 
 	public Long getId() {
@@ -54,11 +51,4 @@ public class GameDTO implements Serializable {
 		this.platform = platform;
 	}
 
-	public GenreDTO getGenre() {
-		return genre;
-	}
-
-	public void setGenre(GenreDTO genre) {
-		this.genre = genre;
-	}
 }
